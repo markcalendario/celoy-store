@@ -1,0 +1,40 @@
+@use "../styles/abstracts/variables-colors" as colors;
+@use "../styles/abstracts/mixins-screens" as screens;
+@use "../styles/abstracts/mixins-text-sizes" as textSizes;
+@use "../styles/layouts/responsive" as responsive;
+
+#hero {
+  background-image: url("/assets/images/wallpapers/hero.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  min-height: 85vh;
+
+  .container {
+    @include responsive.container;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .wrapper {
+      & > * {
+        margin: 10px 0;
+      }
+
+      h1,
+      p {
+        color: colors.$slate;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.31);
+      }
+
+      h1 {
+        @include textSizes.text-3xl;
+
+        @include screens.tabletAndDesktop {
+          @include textSizes.text-4xl;
+        }
+      }
+    }
+  }
+}
