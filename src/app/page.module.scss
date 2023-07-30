@@ -93,6 +93,8 @@
       text-align: center;
 
       img {
+        width: 100%;
+
         @include screens.tabletAndDesktop {
           width: 80%;
         }
