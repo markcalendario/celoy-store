@@ -1,5 +1,10 @@
 import Button from "@/components/Buttons/Buttons";
 import Navbar from "@/components/Navbars/Navbars";
+import Section, {
+  SectionContainer,
+  SectionTitle,
+  SectionWrapper
+} from "@/components/Sections/Sections";
 import { Fragment } from "react";
 import styles from "./page.module.scss";
 
@@ -8,21 +13,7 @@ export default function LandingPageCompiled() {
     <Fragment>
       <Navbar />
       <Hero />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <NewProducts />
     </Fragment>
   );
 }
@@ -41,5 +32,22 @@ function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+function NewProducts() {
+  return (
+    <Section>
+      <SectionContainer>
+        <SectionTitle
+          title="New Products"
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
+            officia."
+        />
+        <SectionWrapper>
+          <h1>hi</h1>
+        </SectionWrapper>
+      </SectionContainer>
+    </Section>
   );
 }

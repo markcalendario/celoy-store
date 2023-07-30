@@ -1,0 +1,29 @@
+@use "../../styles/layouts/responsive" as responsive;
+@use "../../styles/abstracts/mixins-text-sizes" as textSizes;
+@use "../../styles/abstracts/variables-colors" as colors;
+
+.section {
+  padding: 70px 0;
+
+  .container {
+    @include responsive.container;
+
+    .title {
+      h1,
+      p {
+        line-height: 1.75;
+      }
+      h1 {
+        @include textSizes.text-3xl;
+      }
+
+      p {
+        color: colors.$slate-8;
+      }
+    }
+
+    .wrapper {
+      padding-top: 50px;
+    }
+  }
+}

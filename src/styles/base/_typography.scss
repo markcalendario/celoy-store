@@ -1,14 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@use "../abstracts/mixins-screens" as screens;
 
-p,
-a {
-  font-size: 14px;
+@font-face {
+  font-family: "Gotham Medium";
+  src: url("/assets/fonts/Gotham Medium.otf");
 }
 
 * {
-  font-family: "Inter";
-}
-
-* {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Gotham Medium", Arial, Helvetica, sans-serif;
 }
