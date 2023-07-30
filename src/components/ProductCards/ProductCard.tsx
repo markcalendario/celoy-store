@@ -29,15 +29,19 @@ export default function ProductCard(props: IProductCard) {
           {sizes !== null ? (
             <div className={styles.sizes}>
               {sizes.map((size) => (
-                <p className={styles.size}>{size}</p>
+                <p key={size} className={styles.size}>
+                  {size}
+                </p>
               ))}
             </div>
           ) : null}
 
           {variants !== null ? (
             <div className={styles.variants}>
-              {variants.map((size) => (
-                <p className={styles.variant}>{size}</p>
+              {variants.map((variant) => (
+                <p key={variant} className={styles.variant}>
+                  {variant}
+                </p>
               ))}
             </div>
           ) : null}
