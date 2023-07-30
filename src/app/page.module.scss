@@ -32,7 +32,7 @@
         @include textSizes.text-3xl;
 
         @include screens.tabletAndDesktop {
-          @include textSizes.text-4xl;
+          @include textSizes.text-5xl;
         }
       }
     }

@@ -1,8 +1,30 @@
 import Button from "@/components/Buttons/Buttons";
+import Navbar from "@/components/Navbars/Navbars";
+import { Fragment } from "react";
 import styles from "./page.module.scss";
 
 export default function LandingPageCompiled() {
-  return <Hero />;
+  return (
+    <Fragment>
+      <Navbar />
+      <Hero />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </Fragment>
+  );
 }
 
 function Hero() {

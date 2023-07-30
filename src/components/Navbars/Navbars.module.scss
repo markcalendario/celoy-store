@@ -1,0 +1,115 @@
+@use "../../styles/layouts/responsive" as responsive;
+@use "../../styles/abstracts/variables-colors" as colors;
+@use "../../styles/abstracts/mixins-text-sizes" as textSizes;
+
+.tint {
+  background-color: colors.$slate;
+  transition: 0.3s ease;
+
+  * {
+    color: colors.$slate-9;
+  }
+}
+
+.notint {
+  transition: 0.3s ease;
+
+  * {
+    color: colors.$slate;
+  }
+}
+
+.wideScreenNavbar,
+.smallScreenNavbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+
+  .container {
+    @include responsive.container;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .brand {
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.wideScreenNavbar {
+  .container {
+    .wrapper {
+      .links {
+        display: flex;
+        gap: 30px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.smallScreenNavbar {
+  .container {
+    .wrapper {
+      .burger {
+        padding: 0;
+      }
+    }
+  }
+}
+
+#aside {
+  background-color: colors.$slate-1;
+  position: fixed;
+  right: 0px;
+  padding: 20px;
+  width: 90%;
+  height: 100vh;
+
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .brand {
+      font-weight: 900;
+    }
+
+    .close {
+      padding: 2px;
+      border-radius: 50px;
+      aspect-ratio: 1;
+      color: colors.$white;
+      font-size: x-small;
+    }
+  }
+
+  .links {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: colors.$slate-7;
+      text-decoration: none;
+      padding: 15px;
+      padding-left: 10px;
+      transition: 0.2s ease;
+
+      &:hover {
+        background-color: colors.$slate-7;
+        color: colors.$slate;
+        padding-left: 20px;
+      }
+    }
+  }
+}
