@@ -1,5 +1,6 @@
 import Button from "@/components/Buttons/Buttons";
 import Navbar from "@/components/Navbars/Navbars";
+import ProductCard from "@/components/ProductCard/ProductCard";
 import Section, {
   SectionContainer,
   SectionTitle,
@@ -14,6 +15,7 @@ export default function LandingPageCompiled() {
       <Navbar />
       <Hero />
       <NewProducts />
+      <About />
     </Fragment>
   );
 }
@@ -37,15 +39,77 @@ function Hero() {
 
 function NewProducts() {
   return (
-    <Section>
+    <Section id={styles.newProducts}>
       <SectionContainer>
         <SectionTitle
           title="New Products"
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
-            officia."
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, officia."
         />
-        <SectionWrapper>
-          <h1>hi</h1>
+        <SectionWrapper className={styles.wrapper}>
+          <ProductCard
+            className={styles.product}
+            image="/assets/images/products/1.jpg"
+            price={1200}
+            prodId={1}
+            name="Gray and White T-Shirt"
+            sizes={["M", "L", "XL"]}
+            variants={["White", "Gray"]}
+            link="/product/1"
+          />
+          <ProductCard
+            className={styles.product}
+            image="/assets/images/products/2.jpg"
+            price={1200}
+            prodId={2}
+            name="White Tote Bag"
+            sizes={["M", "L", "XL"]}
+            variants={["White", "Gray", "Black"]}
+            link="/product/1"
+          />
+          <ProductCard
+            className={styles.product}
+            image="/assets/images/products/3.jpg"
+            price={1200}
+            prodId={3}
+            name="White PUPian Hoodie"
+            sizes={["M", "L"]}
+            variants={["Black", "White"]}
+            link="/product/2"
+          />
+          <ProductCard
+            className={styles.product}
+            image="/assets/images/products/4.jpg"
+            price={1200}
+            prodId={1}
+            name="Customized Phone Case"
+            sizes={[]}
+            variants={[]}
+            link="/product/1"
+          />
+        </SectionWrapper>
+      </SectionContainer>
+    </Section>
+  );
+}
+
+function About() {
+  return (
+    <Section id={styles.about}>
+      <SectionContainer>
+        <SectionWrapper className={styles.wrapper}>
+          <div className={styles.left}>
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+              temporibus dolorem omnis amet possimus consequatur voluptas
+              perspiciatis laboriosam? Totam harum facilis, excepturi non sed
+              animi ipsum aperiam laboriosam tempora ratione.
+            </p>
+            <Button className="bg-slate-9 text-slate">Explore more.</Button>
+          </div>
+          <div className={styles.right}>
+            <img src="/assets/images/logo.jpg" alt="brand logo" />
+          </div>
         </SectionWrapper>
       </SectionContainer>
     </Section>

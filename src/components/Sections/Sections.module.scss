@@ -9,6 +9,8 @@
     @include responsive.container;
 
     .title {
+      padding-bottom: 50px;
+
       h1,
       p {
         line-height: 1.75;
@@ -23,7 +25,6 @@
     }
 
     .wrapper {
-      padding-top: 50px;
     }
   }
 }

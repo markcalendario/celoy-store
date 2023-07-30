@@ -41,3 +41,60 @@
     }
   }
 }
+
+#newProducts {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 15px;
+
+    .product {
+      width: calc((100% - (15px * 1)) / 2);
+
+      @include screens.tabletAndDesktop {
+        width: calc((100% - (15px * 2)) / 3);
+      }
+    }
+  }
+}
+
+#about {
+  background-color: colors.$slate;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include screens.tabletAndDesktop {
+      flex-direction: row;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .left,
+    .right {
+      @include screens.tabletAndDesktop {
+        width: 50%;
+      }
+    }
+
+    .left {
+      *:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      p {
+        color: colors.$slate-8;
+      }
+    }
+
+    .right {
+      text-align: center;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
