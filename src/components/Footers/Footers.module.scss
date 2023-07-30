@@ -1,0 +1,46 @@
+@use "../../styles/layouts/responsive" as responsive;
+@use "../../styles/abstracts/mixins-screens" as screens;
+@use "../../styles/abstracts/variables-colors" as colors;
+
+#footer {
+  padding: 50px 0;
+  .container {
+    @include responsive.container;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include screens.tabletAndDesktop {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .column {
+        @include screens.tabletAndDesktop {
+          width: calc((100% - (20px * 2)) / 3);
+        }
+
+        .content:not(:first-child) {
+          margin-top: 15px;
+        }
+
+        .content {
+          & > *:not(:first-child) {
+            margin-top: 7px;
+          }
+
+          a {
+            display: block;
+          }
+
+          a,
+          p {
+            color: colors.$slate-7;
+          }
+        }
+      }
+    }
+  }
+}

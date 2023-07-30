@@ -1,6 +1,7 @@
 import Button from "@/components/Buttons/Buttons";
+import Footer from "@/components/Footers/Footers";
 import Navbar from "@/components/Navbars/Navbars";
-import ProductCard from "@/components/ProductCard/ProductCard";
+import ProductCard from "@/components/ProductCards/ProductCard";
 import Section, {
   SectionContainer,
   SectionTitle,
@@ -16,6 +17,7 @@ export default function LandingPageCompiled() {
       <Hero />
       <NewProducts />
       <About />
+      <Footer />
     </Fragment>
   );
 }
@@ -42,7 +44,7 @@ function NewProducts() {
     <Section id={styles.newProducts}>
       <SectionContainer>
         <SectionTitle
-          title="New Products"
+          title="Our Products"
           description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, officia."
         />
         <SectionWrapper className={styles.wrapper}>

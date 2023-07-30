@@ -13,6 +13,7 @@ export default function Navbar() {
       setIsTinted(window.scrollY >= 10 ? true : false);
     };
 
+    updateTint();
     window.addEventListener("scroll", updateTint);
 
     return () => {
