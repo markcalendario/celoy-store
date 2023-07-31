@@ -4,6 +4,12 @@ import { Fragment, useEffect, useState } from "react";
 import Button from "../Buttons/Buttons";
 import styles from "./Navbars.module.scss";
 
+const navLinks = [
+  { name: "Home", link: "/" },
+  { name: "Products", link: "/products" },
+  { name: "Cart", link: "/cart" }
+];
+
 export default function Navbar() {
   const [screenSize, setScreenSize] = useState<null | number>(null);
   const [isTinted, setIsTinted] = useState<null | boolean>(null);
@@ -61,8 +67,9 @@ function WideScreenNavbar({ isTinted }: TNavbar) {
         <div className={styles.wrapper}>
           <h1 className={styles.brand}>CLOY</h1>
           <div className={styles.links}>
-            <a href="">Products</a>
-            <a href="">Cart</a>
+            {navLinks.map((navLink) => (
+              <a href={navLink.link}>{navLink.name}</a>
+            ))}
           </div>
         </div>
       </div>
@@ -117,8 +124,9 @@ function Drawer({ handleToggleDrawer }: TDrawer) {
         </Button>
       </div>
       <div className={styles.links}>
-        <a href="#products">Products</a>
-        <a href="#cart">Cart</a>
+        {navLinks.map((navLink) => (
+          <a href={navLink.link}>{navLink.name}</a>
+        ))}
       </div>
     </aside>
   );

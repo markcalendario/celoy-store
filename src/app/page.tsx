@@ -1,13 +1,18 @@
+"use client";
+
 import Button from "@/components/Buttons/Buttons";
 import Footer from "@/components/Footers/Footers";
+import Loader from "@/components/Loaders/Loaders";
 import Navbar from "@/components/Navbars/Navbars";
-import ProductCard from "@/components/ProductCards/ProductCard";
+import ProductCard, {
+  IProductCard
+} from "@/components/ProductCards/ProductCard";
 import Section, {
   SectionContainer,
   SectionTitle,
   SectionWrapper
 } from "@/components/Sections/Sections";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
 export default function LandingPageCompiled() {
@@ -40,54 +45,44 @@ function Hero() {
 }
 
 function NewProducts() {
+  const [products, setProducts] = useState<IProductCard[] | null>(null);
+
+  const fetchProducts = async () => {
+    const response = await fetch("/assets/data/products.json");
+    const result = await response.json();
+    setProducts(result);
+    console.log(result);
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  if (products === null) {
+    return <Loader />;
+  }
+
   return (
     <Section id={styles.newProducts}>
       <SectionContainer>
         <SectionTitle
-          title="Our Products"
+          title="New Products"
           description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, officia."
         />
         <SectionWrapper className={styles.wrapper}>
-          <ProductCard
-            className={styles.product}
-            image="/assets/images/products/1.jpg"
-            price={1200}
-            prodId={1}
-            name="Gray and White T-Shirt"
-            sizes={["M", "L", "XL"]}
-            variants={["White", "Gray"]}
-            link="/product/1"
-          />
-          <ProductCard
-            className={styles.product}
-            image="/assets/images/products/2.jpg"
-            price={1200}
-            prodId={2}
-            name="White Tote Bag"
-            sizes={["M", "L", "XL"]}
-            variants={["White", "Gray", "Black"]}
-            link="/product/1"
-          />
-          <ProductCard
-            className={styles.product}
-            image="/assets/images/products/3.jpg"
-            price={1200}
-            prodId={3}
-            name="White PUPian Hoodie"
-            sizes={["M", "L"]}
-            variants={["Black", "White"]}
-            link="/product/2"
-          />
-          <ProductCard
-            className={styles.product}
-            image="/assets/images/products/4.jpg"
-            price={1200}
-            prodId={1}
-            name="Customized Phone Case"
-            sizes={[]}
-            variants={[]}
-            link="/product/1"
-          />
+          {products.map((product: IProductCard) => (
+            <ProductCard
+              key={product.pid}
+              pid={product.pid}
+              name={product.name}
+              price={product.price}
+              sizes={product.sizes}
+              variants={product.variants}
+              link={"/product/" + product.pid}
+              image={product.image}
+              className={styles.product}
+            />
+          ))}
         </SectionWrapper>
       </SectionContainer>
     </Section>

@@ -1,11 +1,11 @@
 import styles from "./ProductCard.module.scss";
 
-type IProductCard = {
+export type IProductCard = {
   id?: string;
   className?: string;
   image: string;
   price: number;
-  prodId: number;
+  pid: number;
   sizes: Array<any> | null;
   variants: string[] | null;
   name: string;
@@ -13,7 +13,7 @@ type IProductCard = {
 };
 
 export default function ProductCard(props: IProductCard) {
-  const { id, className, image, name, price, prodId, link, sizes, variants } =
+  const { id, className, image, name, price, pid, link, sizes, variants } =
     props;
 
   return (
