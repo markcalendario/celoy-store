@@ -6,18 +6,19 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.column + " " + styles.brandColumn}>
-            <h1>CLOY</h1>
+            <h1>CELOY</h1>
             <div className={styles.content}>
-              <p>&copy; {new Date().getFullYear()} CLOY.</p>
+              <p>&copy; {new Date().getFullYear()} CELOY.</p>
               <p>All Right Reserved.</p>
             </div>
           </div>
           <div className={styles.column}>
             <div className={styles.content}>
               <h2>Developers</h2>
-              <a href="https://github.com/markcalendario/cloy-ecommerce">
+              <a href="https://github.com/markcalendario/CELOY-ecommerce">
                 Calendario, Mark Kenneth
               </a>
+              <p>Enrico, Carl Andrei</p>
               <p>Levardo, John Race</p>
               <p>Yim, Gwyneth Anmarie</p>
               <p>Ong, Zoe Tatianna</p>

@@ -67,7 +67,7 @@ function WideScreenNavbar({ isTinted }: TNavbar) {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <a href="/" className={styles.brand}>
-            CLOY
+            CELOY
           </a>
           <div className={styles.links}>
             {navLinks.map((navLink) => (
@@ -100,7 +100,7 @@ function SmallScreenNavbar({ isTinted }: TNavbar) {
         <div className={styles.container}>
           <div className={styles.wrapper}>
             <a href="/" className={styles.brand}>
-              CLOY
+              CELOY
             </a>
             <Button
               className={styles.burger + " bg-transparent"}
@@ -123,7 +123,7 @@ function Drawer({ handleToggleDrawer }: TDrawer) {
   return (
     <aside id={styles.aside}>
       <div className={styles.head}>
-        <h4>CLOY</h4>
+        <h4>CELOY</h4>
         <Button
           className={styles.close + " bg-red"}
           onClick={handleToggleDrawer}>

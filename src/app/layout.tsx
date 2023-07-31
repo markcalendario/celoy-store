@@ -3,7 +3,7 @@ import "../styles/fontawesome/css/all.min.css";
 import "../styles/main.scss";
 
 export const metadata: Metadata = {
-  title: "CLOY | Printing Services",
+  title: "CELOY | Printing Services",
   description: "Printing services for PUP students.",
   manifest: "/favicons/site.webmanifest",
   icons: {
