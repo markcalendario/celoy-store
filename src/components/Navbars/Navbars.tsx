@@ -68,7 +68,9 @@ function WideScreenNavbar({ isTinted }: TNavbar) {
           <h1 className={styles.brand}>CLOY</h1>
           <div className={styles.links}>
             {navLinks.map((navLink) => (
-              <a href={navLink.link}>{navLink.name}</a>
+              <a key={navLink.name} href={navLink.link}>
+                {navLink.name}
+              </a>
             ))}
           </div>
         </div>
@@ -125,7 +127,9 @@ function Drawer({ handleToggleDrawer }: TDrawer) {
       </div>
       <div className={styles.links}>
         {navLinks.map((navLink) => (
-          <a href={navLink.link}>{navLink.name}</a>
+          <a key={navLink.name} href={navLink.link}>
+            {navLink.name}
+          </a>
         ))}
       </div>
     </aside>
