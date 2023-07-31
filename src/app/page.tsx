@@ -2,6 +2,7 @@
 
 import Button from "@/components/Buttons/Buttons";
 import Footer from "@/components/Footers/Footers";
+import LinkButton from "@/components/LinkButtons/LinkButtons";
 import Loader from "@/components/Loaders/Loaders";
 import Navbar from "@/components/Navbars/Navbars";
 import ProductCard, {
@@ -37,7 +38,9 @@ function Hero() {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
             officia?
           </p>
-          <Button>View Products</Button>
+          <LinkButton href="/products" className="bg-slate text-slate-7">
+            View Products
+          </LinkButton>
         </div>
       </div>
     </section>

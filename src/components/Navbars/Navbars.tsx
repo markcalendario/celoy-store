@@ -5,7 +5,6 @@ import Button from "../Buttons/Buttons";
 import styles from "./Navbars.module.scss";
 
 const navLinks = [
-  { name: "Home", link: "/" },
   { name: "Products", link: "/products" },
   { name: "Cart", link: "/cart" }
 ];
@@ -65,7 +64,9 @@ function WideScreenNavbar({ isTinted }: TNavbar) {
       }>
       <div className={styles.container}>
         <div className={styles.wrapper}>
-          <h1 className={styles.brand}>CLOY</h1>
+          <a href="/" className={styles.brand}>
+            CLOY
+          </a>
           <div className={styles.links}>
             {navLinks.map((navLink) => (
               <a key={navLink.name} href={navLink.link}>
@@ -96,7 +97,9 @@ function SmallScreenNavbar({ isTinted }: TNavbar) {
         }>
         <div className={styles.container}>
           <div className={styles.wrapper}>
-            <h1 className={styles.brand}>CLOY</h1>
+            <a href="/" className={styles.brand}>
+              CLOY
+            </a>
             <Button
               className={styles.burger + " bg-transparent"}
               onClick={handleToggleDrawer}>
