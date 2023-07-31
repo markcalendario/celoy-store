@@ -42,7 +42,7 @@
   }
 }
 
-#newProducts {
+.newProducts {
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -58,7 +58,7 @@
   }
 }
 
-#about {
+.about {
   background-color: colors.$slate;
 
   .wrapper {

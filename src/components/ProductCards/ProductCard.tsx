@@ -1,16 +1,10 @@
+import { TProduct } from "@/types/products";
 import styles from "./ProductCard.module.scss";
 
-export type IProductCard = {
+export interface IProductCard extends TProduct {
   id?: string;
   className?: string;
-  image: string;
-  price: number;
-  pid: number;
-  sizes: Array<any> | null;
-  variants: string[] | null;
-  name: string;
-  link: string;
-};
+}
 
 export default function ProductCard(props: IProductCard) {
   const { id, className, image, name, price, pid, link, sizes, variants } =

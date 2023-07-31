@@ -5,8 +5,10 @@ import Button from "../Buttons/Buttons";
 import styles from "./Navbars.module.scss";
 
 const navLinks = [
-  { name: "Products", link: "/products" },
-  { name: "Cart", link: "/cart" }
+  { name: "Home", link: "/" },
+  { name: "About Us", link: "/#about" },
+  { name: "New", link: "/#new" },
+  { name: "Products", link: "/products" }
 ];
 
 export default function Navbar() {

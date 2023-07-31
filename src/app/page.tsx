@@ -1,18 +1,16 @@
 "use client";
 
-import Button from "@/components/Buttons/Buttons";
 import Footer from "@/components/Footers/Footers";
 import LinkButton from "@/components/LinkButtons/LinkButtons";
 import Loader from "@/components/Loaders/Loaders";
 import Navbar from "@/components/Navbars/Navbars";
-import ProductCard, {
-  IProductCard
-} from "@/components/ProductCards/ProductCard";
+import ProductCard from "@/components/ProductCards/ProductCard";
 import Section, {
   SectionContainer,
   SectionTitle,
   SectionWrapper
 } from "@/components/Sections/Sections";
+import { TProduct } from "@/types/products";
 import { Fragment, useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
@@ -48,7 +46,7 @@ function Hero() {
 }
 
 function NewProducts() {
-  const [products, setProducts] = useState<IProductCard[] | null>(null);
+  const [products, setProducts] = useState<TProduct[] | null>(null);
 
   const fetchProducts = async () => {
     const response = await fetch("/assets/data/products.json");
@@ -66,14 +64,14 @@ function NewProducts() {
   }
 
   return (
-    <Section id={styles.newProducts}>
+    <Section id="new" className={styles.newProducts}>
       <SectionContainer>
         <SectionTitle
           title="New Products"
           description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, officia."
         />
         <SectionWrapper className={styles.wrapper}>
-          {products.map((product: IProductCard) => (
+          {products.map((product: TProduct) => (
             <ProductCard
               key={product.pid}
               pid={product.pid}
@@ -94,7 +92,7 @@ function NewProducts() {
 
 function About() {
   return (
-    <Section id={styles.about}>
+    <Section id="about" className={styles.about}>
       <SectionContainer>
         <SectionWrapper className={styles.wrapper}>
           <div className={styles.left}>
@@ -105,7 +103,9 @@ function About() {
               perspiciatis laboriosam? Totam harum facilis, excepturi non sed
               animi ipsum aperiam laboriosam tempora ratione.
             </p>
-            <Button className="bg-slate-9 text-slate">Explore more.</Button>
+            <LinkButton href="/products" className="bg-slate-9 text-slate">
+              Explore more.
+            </LinkButton>
           </div>
           <div className={styles.right}>
             <img src="/assets/images/logo.jpg" alt="brand logo" />

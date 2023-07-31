@@ -3,14 +3,14 @@
 import Footer from "@/components/Footers/Footers";
 import Loader from "@/components/Loaders/Loaders";
 import Navbar from "@/components/Navbars/Navbars";
-import ProductCard, {
-  IProductCard
-} from "@/components/ProductCards/ProductCard";
+
+import ProductCard from "@/components/ProductCards/ProductCard";
 import Section, {
   SectionContainer,
   SectionTitle,
   SectionWrapper
 } from "@/components/Sections/Sections";
+import { TProduct } from "@/types/products";
 import { Fragment, useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
@@ -42,7 +42,7 @@ function Hero() {
 }
 
 function ProductList() {
-  const [products, setProducts] = useState<IProductCard[] | null>(null);
+  const [products, setProducts] = useState<TProduct[] | null>(null);
 
   const fetchProducts = async () => {
     const response = await fetch("/assets/data/products.json");
@@ -64,7 +64,7 @@ function ProductList() {
       <SectionContainer>
         <SectionTitle title="Our Products" />
         <SectionWrapper className={styles.wrapper}>
-          {products.map((product: IProductCard) => (
+          {products.map((product: TProduct) => (
             <ProductCard
               key={product.pid}
               pid={product.pid}

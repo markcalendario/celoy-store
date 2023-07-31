@@ -1,6 +1,6 @@
 [
   {
-    "pid": 1,
+    "pid": "1",
     "name": "Product name here",
     "sizes": ["M", "L", "XL"],
     "variants": ["Red"],
@@ -8,7 +8,7 @@
     "image": "/assets/images/products/1.jpg"
   },
   {
-    "pid": 2,
+    "pid": "2",
     "name": "Hello madlang pipol, mabuhay",
     "sizes": null,
     "variants": ["Maroon", "Black", "White"],
@@ -16,7 +16,7 @@
     "image": "/assets/images/products/2.jpg"
   },
   {
-    "pid": 3,
+    "pid": "3",
     "name": "Isang libo, isang tuwa, EAT.",
     "sizes": ["S", "M", "L", "XL"],
     "variants": ["Black", "White"],
@@ -24,7 +24,7 @@
     "image": "/assets/images/products/3.jpg"
   },
   {
-    "pid": 4,
+    "pid": "4",
     "name": "Tahanang pinakamasaya, eat bulaga!",
     "sizes": null,
     "variants": ["Black", "White"],
