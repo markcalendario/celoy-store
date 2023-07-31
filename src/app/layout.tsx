@@ -3,8 +3,8 @@ import "../styles/fontawesome/css/all.min.css";
 import "../styles/main.scss";
 
 export const metadata: Metadata = {
-  title: "CLOY | Lanyards",
-  description: "Customized lanyards for PUP students.",
+  title: "CLOY | Printing Services",
+  description: "Printing services for PUP students.",
   manifest: "/favicons/site.webmanifest",
   icons: {
     icon: "/favicons/favicon-32x32.png",
