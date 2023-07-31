@@ -15,7 +15,7 @@ export default function Footer() {
           <div className={styles.column}>
             <div className={styles.content}>
               <h2>Developers</h2>
-              <a href="https://github.com/markcalendario/CELOY-ecommerce">
+              <a href="https://github.com/markcalendario/celoy-store">
                 Calendario, Mark Kenneth
               </a>
               <p>Enrico, Carl Andrei</p>
@@ -32,6 +32,8 @@ export default function Footer() {
             <div className={styles.content}>
               <h2>Technology</h2>
               <p>Next.JS</p>
+              <p>Node.JS</p>
+              <p>SASS</p>
             </div>
           </div>
         </div>

@@ -31,11 +31,8 @@ function Hero() {
     <section id={styles.hero}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
-          <h1>Lorem ipsum dolor sit amet.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
-            officia?
-          </p>
+          <h1>Made for every PUPian.</h1>
+          <p>Feel authentic. Feel like a ⭐Iskolar ng Bayan⭐.</p>
           <LinkButton href="/products" className="bg-slate text-slate-7">
             View Products
           </LinkButton>
@@ -68,7 +65,7 @@ function NewProducts() {
       <SectionContainer>
         <SectionTitle
           title="New Products"
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, officia."
+          description="Check out these newly arrived printed tees, tote bags and phone cases."
         />
         <SectionWrapper className={styles.wrapper}>
           {products.map((product: TProduct) => (
@@ -96,12 +93,25 @@ function About() {
       <SectionContainer>
         <SectionWrapper className={styles.wrapper}>
           <div className={styles.left}>
-            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <h1>Unleash Your Imagination, Printed to Perfection!</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-              temporibus dolorem omnis amet possimus consequatur voluptas
-              perspiciatis laboriosam? Totam harum facilis, excepturi non sed
-              animi ipsum aperiam laboriosam tempora ratione.
+              CELOY is a company founded by PUP students just like you. We have
+              the products that surely suit you up, tested and approved by
+              students themselves. Feel good with us. CELOY has the quality that
+              never goes out of style.
+            </p>
+            <p>
+              At CLOY, we believe that creativity knows no bounds. Whether it's
+              designing custom clothing that reflects your style, personalizing
+              mugs that warm your heart every morning, or crafting any other
+              customized item that holds a special meaning, we are here to turn
+              your ideas into reality.
+            </p>
+            <p>
+              So come on this journey with us, where dreams come to life, and
+              the joy of personalized printing awaits. Let CLOY be the canvas
+              for your imagination and together, let's make your world a little
+              more colorful, one print at a time.
             </p>
             <LinkButton href="/products" className="bg-slate-9 text-slate">
               Explore more.
