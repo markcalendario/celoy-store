@@ -30,10 +30,11 @@ function Hero() {
     <section id={styles.productHero}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
-          <h1>Lorem ipsum dolor sit amet.</h1>
+          <h1>Our Products</h1>
           <p>
-            Asperiores enim praesentium facere molestias quis, necessitatibus in
-            quam.
+            Customize your style with our personalized printing services.
+            T-shirts, phone cases, and more. Express yourself today! High
+            quality, fast turnaround. Satisfaction guaranteed.
           </p>
         </div>
       </div>

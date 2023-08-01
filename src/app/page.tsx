@@ -32,7 +32,7 @@ function Hero() {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <h1>Made for every PUPian.</h1>
-          <p>Feel authentic. Feel like a ⭐Iskolar ng Bayan⭐.</p>
+          <p>Feel authentic. Feel like a Iskolar ng Bayan.</p>
           <LinkButton href="/products" className="bg-slate text-slate-7">
             View Products
           </LinkButton>

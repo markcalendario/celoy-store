@@ -9,7 +9,7 @@
   },
   {
     "pid": "2",
-    "name": "Hello madlang pipol, mabuhay",
+    "name": "Product Name Here",
     "sizes": null,
     "variants": ["Maroon", "Black", "White"],
     "price": 1500,
@@ -17,7 +17,7 @@
   },
   {
     "pid": "3",
-    "name": "Isang libo, isang tuwa, EAT.",
+    "name": "Product Name Here",
     "sizes": ["S", "M", "L", "XL"],
     "variants": ["Black", "White"],
     "price": 1000,
@@ -25,10 +25,122 @@
   },
   {
     "pid": "4",
-    "name": "Tahanang pinakamasaya, eat bulaga!",
+    "name": "Product Name Here",
     "sizes": null,
     "variants": ["Black", "White"],
     "price": 1000,
     "image": "/assets/images/products/4.jpg"
+  },
+  {
+    "pid": "5",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/5.jpg"
+  },
+  {
+    "pid": "6",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/6.jpg"
+  },
+  {
+    "pid": "7",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/7.jpg"
+  },
+  {
+    "pid": "8",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/8.jpg"
+  },
+  {
+    "pid": "9",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/9.jpg"
+  },
+  {
+    "pid": "10",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/10.jpg"
+  },
+  {
+    "pid": "11",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/11.jpg"
+  },
+  {
+    "pid": "12",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/12.jpg"
+  },
+  {
+    "pid": "13",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/13.jpg"
+  },
+  {
+    "pid": "14",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/14.jpg"
+  },
+  {
+    "pid": "15",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/15.jpg"
+  },
+  {
+    "pid": "16",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/16.jpg"
+  },
+  {
+    "pid": "17",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/17.jpg"
+  },
+  {
+    "pid": "18",
+    "name": "Product Name Here",
+    "sizes": null,
+    "variants": ["Black", "White"],
+    "price": 1000,
+    "image": "/assets/images/products/18.jpg"
   }
 ]
