@@ -4,7 +4,7 @@ import Footer from "@/components/Footers/Footers";
 import Loader from "@/components/Loaders/Loaders";
 import Navbar from "@/components/Navbars/Navbars";
 import { TProduct } from "@/types/products";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
 type TProductViewerProps = {
@@ -24,7 +24,7 @@ export default function ProductCompiled({ params }: TProductViewerProps) {
 function Product({ id }: { id: string }) {
   const [product, setProduct] = useState<null | TProduct>(null);
 
-  const fetchProduct = async () => {
+  const fetchProduct = useCallback(async () => {
     const respose = await fetch("/assets/data/products.json");
     const products: TProduct[] = await respose.json();
 
@@ -34,15 +34,11 @@ function Product({ id }: { id: string }) {
       setProduct(product);
       break;
     }
-  };
-
-  useEffect(() => {
-    console.log("PROD:", product);
-  }, [product]);
+  }, [id]);
 
   useEffect(() => {
     fetchProduct();
-  }, []);
+  }, [fetchProduct]);
 
   if (product === null) {
     return <Loader />;
