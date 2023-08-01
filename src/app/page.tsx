@@ -11,7 +11,7 @@ import Section, {
   SectionWrapper
 } from "@/components/Sections/Sections";
 import { TProduct } from "@/types/products";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
 export default function LandingPageCompiled() {
@@ -45,16 +45,15 @@ function Hero() {
 function NewProducts() {
   const [products, setProducts] = useState<TProduct[] | null>(null);
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     const response = await fetch("/assets/data/products.json");
     const result = await response.json();
     setProducts(result);
-    console.log(result);
-  };
+  }, []);
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [fetchProducts]);
 
   if (products === null) {
     return <Loader />;
@@ -101,17 +100,17 @@ function About() {
               never goes out of style.
             </p>
             <p>
-              At CLOY, we believe that creativity knows no bounds. Whether it's
-              designing custom clothing that reflects your style, personalizing
-              mugs that warm your heart every morning, or crafting any other
-              customized item that holds a special meaning, we are here to turn
-              your ideas into reality.
+              At CLOY, we believe that creativity knows no bounds. Whether
+              it&apos;s designing custom clothing that reflects your style,
+              personalizing mugs that warm your heart every morning, or crafting
+              any other customized item that holds a special meaning, we are
+              here to turn your ideas into reality.
             </p>
             <p>
               So come on this journey with us, where dreams come to life, and
               the joy of personalized printing awaits. Let CLOY be the canvas
-              for your imagination and together, let's make your world a little
-              more colorful, one print at a time.
+              for your imagination and together, let&apos;s make your world a
+              little more colorful, one print at a time.
             </p>
             <LinkButton href="/products" className="bg-slate-9 text-slate">
               Explore more.
