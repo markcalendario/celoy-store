@@ -10,6 +10,9 @@ export default function Footer() {
             <div className={styles.content}>
               <p>&copy; {new Date().getFullYear()} CELOY.</p>
               <p>All Right Reserved.</p>
+              <a href="https://github.com/markcalendario/celoy-store">
+                <i className="fab fa-github" /> Visit this project.
+              </a>
             </div>
           </div>
           <div className={styles.column}>
